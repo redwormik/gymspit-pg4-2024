@@ -1,5 +1,5 @@
 ﻿using Lecture1;
-
+using System.Linq.Expressions;
 
 static void PrintHighways(City city)
 {
@@ -24,7 +24,27 @@ static bool Neighbors(City city, City destination)
 
 static bool Connected(City city, City destination)
 {
-	// TODO
+	Queue<City> queue = new Queue<City>();
+	ISet<City> visited = new HashSet<City>();
+	queue.Enqueue(city);
+	visited.Add(city);
+
+	while (queue.Count > 0) {
+		City nowVisiting = queue.Dequeue();
+
+		if (nowVisiting == destination) {
+			return true;
+		}
+
+		foreach (Highway highway in nowVisiting.GetHighways()) {
+			City next = highway.OtherEnd(nowVisiting);
+			if (!visited.Contains(next)) {
+				queue.Enqueue(next);
+				visited.Add(next);
+			}
+		}
+	}
+
 	return false;
 }
 
@@ -65,6 +85,9 @@ PrintHighways(plzen);
 PrintHighways(liberec);
 PrintHighways(brno);
 PrintHighways(bratislava);
+PrintHighways(newYork);
+PrintHighways(lasVegas);
+PrintHighways(losAngeles);
 PrintHighways(anchorage);
 
 
