@@ -1,5 +1,4 @@
 ﻿using Lecture1;
-using System.Linq.Expressions;
 
 static void PrintHighways(City city)
 {
@@ -46,6 +45,29 @@ static bool Connected(City city, City destination)
 	}
 
 	return false;
+}
+
+
+static int? ShortestPath(City city, City destination, out IList<City> path)
+{
+	path = null;
+	return null;
+}
+
+
+static void PrintPath(City city, City destination)
+{
+	IList<City> path;
+	int? length = ShortestPath(city, destination, out path);
+	if (length == null) {
+		Console.WriteLine("ShortestPath({0}, {1}) = N/A", city.Name, destination.Name);
+		return;
+	}
+
+	Console.WriteLine("ShortestPath({0}, {1}) = {2}", city.Name, destination.Name, length);
+	foreach (City waypoint in path) {
+		Console.WriteLine("\t{0}", waypoint.Name);
+	}
 }
 
 
@@ -120,3 +142,21 @@ Console.WriteLine("Connected({0}, {1}) = {2}", praha.Name, anchorage.Name, Conne
 
 Console.WriteLine("Connected({0}, {1}) = {2}", anchorage.Name, anchorage.Name, Connected(anchorage, anchorage));
 Console.WriteLine("Connected({0}, {1}) = {2}", anchorage.Name, praha.Name, Connected(anchorage, praha));
+
+PrintPath(praha, praha);
+PrintPath(praha, brno);
+PrintPath(praha, plzen);
+PrintPath(praha, liberec);
+PrintPath(praha, bratislava);
+
+PrintPath(praha, newYork);
+PrintPath(praha, newJersey);
+PrintPath(praha, lasVegas);
+PrintPath(praha, losAngeles);
+PrintPath(praha, sanFrancisco);
+PrintPath(praha, anchorage);
+
+PrintPath(plzen, liberec);
+
+PrintPath(anchorage, anchorage);
+PrintPath(anchorage, praha);
