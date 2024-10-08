@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lecture6MethodPolymophism", "Lecture6MethodPolymorphism\Lecture6MethodPolymophism.csproj", "{6B02C4F6-AD95-44B6-9210-23F97B899B64}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lecture6MethodOverloading", "Lecture6MethodOverloading\Lecture6MethodOverloading.csproj", "{962645DD-0738-4E53-BDCE-E7C28A91A110}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lecture6OperatorOverloading", "Lecture6OperatorOverloading\Lecture6OperatorOverloading.csproj", "{272C3389-40E2-4C6D-AFF2-1C8BEE4FB684}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B02C4F6-AD95-44B6-9210-23F97B899B64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B02C4F6-AD95-44B6-9210-23F97B899B64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B02C4F6-AD95-44B6-9210-23F97B899B64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B02C4F6-AD95-44B6-9210-23F97B899B64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{962645DD-0738-4E53-BDCE-E7C28A91A110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{962645DD-0738-4E53-BDCE-E7C28A91A110}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{962645DD-0738-4E53-BDCE-E7C28A91A110}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{962645DD-0738-4E53-BDCE-E7C28A91A110}.Release|Any CPU.Build.0 = Release|Any CPU
+		{272C3389-40E2-4C6D-AFF2-1C8BEE4FB684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{272C3389-40E2-4C6D-AFF2-1C8BEE4FB684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{272C3389-40E2-4C6D-AFF2-1C8BEE4FB684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{272C3389-40E2-4C6D-AFF2-1C8BEE4FB684}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {98C9AB32-F21E-4126-907D-85CD4F42DDA0}
+	EndGlobalSection
+EndGlobal
