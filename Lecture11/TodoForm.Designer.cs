@@ -27,13 +27,12 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			components = new System.ComponentModel.Container();
 			newTodoTitle = new TextBox();
 			addButton = new Button();
 			dataGridView1 = new DataGridView();
-			todoManagerBindingSource = new BindingSource(components);
+			dataGridView2 = new DataGridView();
 			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-			((System.ComponentModel.ISupportInitialize)todoManagerBindingSource).BeginInit();
+			((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
 			SuspendLayout();
 			// 
 			// newTodoTitle
@@ -55,31 +54,44 @@
 			// 
 			// dataGridView1
 			// 
-			dataGridView1.AutoGenerateColumns = false;
 			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridView1.DataSource = todoManagerBindingSource;
 			dataGridView1.Location = new Point(129, 144);
+			dataGridView1.MultiSelect = false;
 			dataGridView1.Name = "dataGridView1";
 			dataGridView1.RowTemplate.Height = 25;
 			dataGridView1.Size = new Size(240, 150);
 			dataGridView1.TabIndex = 2;
+			dataGridView1.CellMouseDoubleClick += dataGridView_CellMouseUpOrDoubleClick;
+			dataGridView1.CellMouseUp += dataGridView_CellMouseUpOrDoubleClick;
+			dataGridView1.CellValueChanged += dataGridView_CellValueChanged;
+			dataGridView1.UserAddedRow += dataGridView1_UserAddedRow;
+			dataGridView1.UserDeletingRow += dataGridView1_UserDeletingRow;
 			// 
-			// todoManagerBindingSource
+			// dataGridView2
 			// 
-			todoManagerBindingSource.DataSource = typeof(TodoManager);
+			dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridView2.Location = new Point(428, 144);
+			dataGridView2.Name = "dataGridView2";
+			dataGridView2.RowTemplate.Height = 25;
+			dataGridView2.Size = new Size(240, 150);
+			dataGridView2.TabIndex = 3;
+			dataGridView2.CellMouseDoubleClick += dataGridView_CellMouseUpOrDoubleClick;
+			dataGridView2.CellMouseUp += dataGridView_CellMouseUpOrDoubleClick;
+			dataGridView2.CellValueChanged += dataGridView_CellValueChanged;
 			// 
 			// TodoForm
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(800, 450);
+			Controls.Add(dataGridView2);
 			Controls.Add(dataGridView1);
 			Controls.Add(addButton);
 			Controls.Add(newTodoTitle);
 			Name = "TodoForm";
 			Text = "TodoForm";
 			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-			((System.ComponentModel.ISupportInitialize)todoManagerBindingSource).EndInit();
+			((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -89,6 +101,6 @@
 		private TextBox newTodoTitle;
 		private Button addButton;
 		private DataGridView dataGridView1;
-		private BindingSource todoManagerBindingSource;
+		private DataGridView dataGridView2;
 	}
 }

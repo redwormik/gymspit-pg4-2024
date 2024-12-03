@@ -5,9 +5,11 @@
 		private IList<Todo> todos = new List<Todo>();
 
 
-		public void AddTodo(string title)
+		public Todo AddTodo(string title)
 		{
-			todos.Add(new Todo(title));
+			Todo todo = new Todo(title);
+			todos.Add(todo);
+			return todo;
 		}
 
 

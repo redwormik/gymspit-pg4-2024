@@ -17,6 +17,12 @@ namespace Lecture11
 			
 			if (welcomeForm.DialogResult == DialogResult.Continue) {
 				TodoManager todoManager = new TodoManager();
+
+				todoManager.AddTodo("First");
+				todoManager.AddTodo("Second");
+				todoManager.AddTodo("Third");
+				todoManager.GetTodos()[1].Completed = true;
+
 				Application.Run(new TodoForm(todoManager));
 			}
 		}
