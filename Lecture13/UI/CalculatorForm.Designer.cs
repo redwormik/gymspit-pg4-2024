@@ -38,19 +38,19 @@
 			numberButton7 = new Button();
 			numberButton8 = new Button();
 			numberButton9 = new Button();
+			decimalsButton = new Button();
+			clearButton = new Button();
 			SuspendLayout();
 			// 
 			// valueLabel
 			// 
-			valueLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-			valueLabel.AutoSize = true;
 			valueLabel.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-			valueLabel.Location = new Point(765, 9);
+			valueLabel.Location = new Point(12, 9);
 			valueLabel.Name = "valueLabel";
-			valueLabel.Size = new Size(23, 25);
+			valueLabel.Size = new Size(776, 25);
 			valueLabel.TabIndex = 0;
 			valueLabel.Text = "0";
-			valueLabel.TextAlign = ContentAlignment.TopRight;
+			valueLabel.TextAlign = ContentAlignment.MiddleRight;
 			// 
 			// numberButton0
 			// 
@@ -162,11 +162,35 @@
 			numberButton9.UseVisualStyleBackColor = true;
 			numberButton9.Click += numberButton_Click;
 			// 
-			// Form1
+			// decimalsButton
+			// 
+			decimalsButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			decimalsButton.Location = new Point(58, 238);
+			decimalsButton.Name = "decimalsButton";
+			decimalsButton.Size = new Size(40, 40);
+			decimalsButton.TabIndex = 11;
+			decimalsButton.Text = ",";
+			decimalsButton.UseVisualStyleBackColor = true;
+			decimalsButton.Click += decimalsButton_Click;
+			// 
+			// clearButton
+			// 
+			clearButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			clearButton.Location = new Point(104, 238);
+			clearButton.Name = "clearButton";
+			clearButton.Size = new Size(40, 40);
+			clearButton.TabIndex = 12;
+			clearButton.Text = "C";
+			clearButton.UseVisualStyleBackColor = true;
+			clearButton.Click += clearButton_Click;
+			// 
+			// CalculatorForm
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(800, 450);
+			Controls.Add(clearButton);
+			Controls.Add(decimalsButton);
 			Controls.Add(numberButton9);
 			Controls.Add(numberButton8);
 			Controls.Add(numberButton7);
@@ -178,10 +202,9 @@
 			Controls.Add(numberButton1);
 			Controls.Add(numberButton0);
 			Controls.Add(valueLabel);
-			Name = "Form1";
+			Name = "CalculatorForm";
 			Text = "Form1";
 			ResumeLayout(false);
-			PerformLayout();
 		}
 
 		#endregion
@@ -197,5 +220,7 @@
 		private Button numberButton7;
 		private Button numberButton8;
 		private Button numberButton9;
+		private Button decimalsButton;
+		private Button clearButton;
 	}
 }
